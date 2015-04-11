@@ -1,0 +1,22 @@
+#ifndef PATCH_H
+#define PATCH_H
+
+#include <swarm_pheromone/GlobalDeclaration.h>
+
+
+
+struct Patch
+{
+    Marker marker;
+    float nestChemical;
+    float foodTrailChemical;
+    int foodPatchNumber;
+    float foodValue = 0;
+    bool isNest;
+    Point position;
+};
+
+
+
+
+#endif // PATCH_H
