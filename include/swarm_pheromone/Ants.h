@@ -21,6 +21,9 @@ class Ants
         Ants();
         /** Default destructor */
         virtual ~Ants();
+        void antInit();
+
+
     protected:
     private:
         vector<Ant> antBots;

@@ -69,9 +69,10 @@ void initializeGlobalVariables()
     nestLocation.x = 0;
     nestLocation.y = 0;
 
-
     patchStarting.x = 0;
     patchStarting.y = 0;
+
+    antCount = initialAnts;
 
     Point foodPatchLocation;
     foodPatchLocation.x = 94;

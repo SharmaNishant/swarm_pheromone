@@ -30,20 +30,20 @@ bool isInsideRectangle(Point boundaryOne, Point boundaryTwo, Point boundaryThree
 bool isInsideBoundary(Point location);
 
 
-Point patchStarting;
+extern Point patchStarting;
 
 
 const int environmentHeight = 100;
 const int environmentWidth = 100;
 const int initialAnts = 1;
-int antCount = initialAnts;
+extern int antCount;
 const int nestRadius = 5;
 const int foodPatchRadius = 5;
 
-vector<FoodPatch> foodPatches;
+extern vector<FoodPatch> foodPatches;
 
 
-Point nestLocation;
+extern Point nestLocation;
 
 void initializeGlobalVariables();
 
