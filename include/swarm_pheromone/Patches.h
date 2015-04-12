@@ -2,6 +2,8 @@
 #define PATCH_H
 
 #include <swarm_pheromone/GlobalDeclaration.h>
+#include <ros/ros.h>
+#include <visualization_msgs/MarkerArray.h>
 
 float evaporationRate = 0.01;
 float diffusionRate = 0.20;
@@ -19,7 +21,6 @@ struct Patch
     Point position;
 };
 
-
 class Environment
 {
     public:
@@ -33,10 +34,11 @@ class Environment
         void diffusion();
         void evaporation();
         void update();
-
+        void publishPatches();
         Patch getPatch(int i, int j);
         void setPatch(int i, int j, Patch patch);
 
+        ros::Publisher envPublisher;
     private:
         Patch patches[environmentHeight][environmentWidth];
 

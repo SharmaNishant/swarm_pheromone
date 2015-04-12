@@ -66,13 +66,13 @@ bool isInsideRectangle(Point boundaryOne, Point boundaryTwo, Point boundaryThree
 
 void initializeGlobalVariables()
 {
-    nestLocation.x = 0;
-    nestLocation.y = 0;
+    nestLocation.x = 5;
+    nestLocation.y = 5;
 
     patchStarting.x = 0;
     patchStarting.y = 0;
 
-    antCount = initialAnts;
+    antCount = 0;
 
     Point foodPatchLocation;
     foodPatchLocation.x = 94;

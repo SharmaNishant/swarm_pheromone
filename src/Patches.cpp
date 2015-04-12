@@ -86,7 +86,7 @@ void Environment::markerInit()
             this->patches[i][j].marker.id = id++;
 
             //defining types
-            this->patches[i][j].marker.type = visualization_msgs::Marker::SPHERE;
+            this->patches[i][j].marker.type = visualization_msgs::Marker::CUBE;
 
             //setting position
             this->patches[i][j].marker.pose.position.x = i;
@@ -146,6 +146,7 @@ void Environment::recolorPatch()
                     color.r = color.g = color.b = 1.0f;
                 }
             }
+            color.a = 1.0f;
             this->patches[i][j].color = color;
         }
     }
@@ -203,4 +204,19 @@ Patch Environment::getPatch(int i, int j)
 void Environment::setPatch(int i, int j, Patch patch)
 {
     this->patches[i][j] = patch;
+}
+
+void Environment::publishPatches()
+{
+    vector< Marker > markers;
+    for(int i = 0; i < environmentHeight; i++)
+    {
+        for(int j = 0;j < environmentWidth; j++)
+        {
+            markers.push_back(this->patches[i][j].marker);
+        }
+    }
+    visualization_msgs::MarkerArray markerArray;
+    markerArray.markers = markers;
+    envPublisher.publish(markerArray);
 }

@@ -29,9 +29,7 @@ float GetAngle(Point destination, Point source);
 bool isInsideRectangle(Point boundaryOne, Point boundaryTwo, Point boundaryThree, Point location);
 bool isInsideBoundary(Point location);
 
-
 extern Point patchStarting;
-
 
 const int environmentHeight = 100;
 const int environmentWidth = 100;
@@ -39,14 +37,9 @@ const int initialAnts = 1;
 extern int antCount;
 const int nestRadius = 5;
 const int foodPatchRadius = 5;
-
+const int antStepSize = 1;
 extern vector<FoodPatch> foodPatches;
-
-
 extern Point nestLocation;
-
 void initializeGlobalVariables();
-
-
 
 #endif // GLOBALDECLARATION_H
