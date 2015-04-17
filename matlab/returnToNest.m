@@ -12,7 +12,7 @@ if Patches(x,y).isNest == true
     Robots(i).color = 'r';
     Robots(i).direction = Robots(i).direction * -1;
     Robots(i).state = lookFood;
-    disp('ffod');
+    disp('food');
     disp(Robots(i).x);
     disp(Robots(i).y);
 else

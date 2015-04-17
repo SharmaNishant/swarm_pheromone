@@ -4,8 +4,8 @@ global Patches
 global EnvSize
 
 foodRadius = 5;
-foodPatch1X = 94;
-foodPatch1Y = 94;
+foodPatch1X = 54;
+foodPatch1Y = 54;
 
 for i=1:EnvSize
     for j=1:EnvSize

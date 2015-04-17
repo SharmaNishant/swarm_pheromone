@@ -4,6 +4,7 @@ global Robots
 
 
 max = -1;
+min = 99999;
 id = [-1 -1];
 
 x = floor(Robots(i).x);

@@ -4,12 +4,13 @@ global numRobots
 global Robots
 global lookFood
 global toNest
+global ticks
 
 lookFood = 1;
 toNest = 2;
 
 
-numRobots = 1;
+numRobots = 100;
 Robots = struct();
 Robots(1:numRobots) = struct();
 
@@ -23,4 +24,5 @@ for i=1:numRobots
     Robots(i).color = 'red';
     Robots(i).handle = plot(Robots(i).x,Robots(i).y,'Marker','o','MarkerFaceColor',Robots(i).color,'MarkerSize',6);
     Robots(i).state = lookFood;
+    Robots(i).lastAlive = ticks;
 end

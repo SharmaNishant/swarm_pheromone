@@ -16,7 +16,7 @@ for i=1:100
                    Patches(i,j).foodTrailChemical = Patches(i,j).foodTrailChemical * (1 - diffusionRate);
                 else
                   % Patches(k,l).nestChemical = Patches(k,l).nestChemical + (Patches(i,j).nestChemical * (diffusionRate/8));  
-                   Patches(k,l).foodTrailChemical = Patches(k,l).foodTrailChemical + (Patches(i,j).foodTrailChemical * (diffusionRate/8));   
+                   Patches(k,l).foodTrailChemical = Patches(k,l).foodTrailChemical + (Patches(i,j).foodTrailChemical * (diffusionRate));   
                 end
             end
         end
