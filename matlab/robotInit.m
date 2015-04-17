@@ -20,9 +20,10 @@ for i=1:numRobots
     Robots(i).lastX = rand(1,1)*50;
     Robots(i).lastY = rand(1,1)*50;
     Robots(i).step = 1;
+    Robots(i).lifeFlag = true;
     Robots(i).direction = rand(1,1);
     Robots(i).color = 'red';
     Robots(i).handle = plot(Robots(i).x,Robots(i).y,'Marker','o','MarkerFaceColor',Robots(i).color,'MarkerSize',6);
     Robots(i).state = lookFood;
-    Robots(i).lastAlive = ticks;
+    Robots(i).lastFoodTime = 0;
 end

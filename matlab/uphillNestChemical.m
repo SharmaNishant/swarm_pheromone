@@ -25,6 +25,6 @@ end
 
 direction = atan2((id(2) - y),(id(1)-x));
 Robots(i).direction = direction;
-Patches(x,y).foodTrailChemical = Patches(x,y).foodTrailChemical + 30000;
+Patches(x,y).foodTrailChemical = Patches(x,y).foodTrailChemical + 10;
 %disp(direction);
 end

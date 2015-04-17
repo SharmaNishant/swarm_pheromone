@@ -13,9 +13,10 @@ global lookFood
 global diffusionRate
 global evaporationRate
 
+global tempTrail
 
-diffusionRate = 0.5;
-evaporationRate = 0.001;
+diffusionRate = 0.3;
+evaporationRate = 0.1;
 
 envInit();
 nestInit();
@@ -29,12 +30,19 @@ for t=1:10000
     if mod(ticks, 10) == 0
         recolorPatch();
         drawnow();
-    end
+     end
     ticks = ticks + 1;
     for i=1:numRobots
 
+        if (ticks - Robots(i).lastFoodTime ) > 500 
+            Robots(i).lifeFlag = false;
+            disp('died')
+        end
         
-
+        if(Robots(i).lifeFlag == false)
+           continue 
+        end
+        
         if Robots(i).state == lookFood
             lookForFood(i);
         else
