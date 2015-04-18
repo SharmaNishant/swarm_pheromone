@@ -22,6 +22,7 @@ for i=1:EnvSize
         Patches(i,j).nestChemical = 0;
         Patches(i,j).foodTrailChemical = 0;
         Patches(i,j).foodPatchNumber = 0;
+        Patches(i,j).deathChemical = 0;
         Patches(i,j).foodValue = 0;
         Patches(i,j).isNest = false;
         Patches(i,j).polygon = [i-1 j-1;

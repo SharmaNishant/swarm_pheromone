@@ -1,9 +1,12 @@
 function result = checkEnvBoundary(x,y)
+
+global EnvSize
+
 x1 = 0;
 x2 = 0;
-x3 = 100;
+x3 = EnvSize;
 y1 = 0;
-y2 = 100;
+y2 = EnvSize;
 y3 = 0;
 
 dv13 = ((x3 - x1) * (x3 - x1)) + ((y3 - y1) * (y3 - y1));

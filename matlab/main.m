@@ -13,7 +13,6 @@ global lookFood
 global diffusionRate
 global evaporationRate
 
-global tempTrail
 
 diffusionRate = 0.3;
 evaporationRate = 0.1;
