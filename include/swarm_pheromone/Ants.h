@@ -1,7 +1,7 @@
 #ifndef ANTS_H
 #define ANTS_H
 
-#include <swarm_pheromone/GlobalDeclarations.h>
+#include <swarm_pheromone/GlobalDeclaration.h>
 #include <ros/ros.h>
 #include <visualization_msgs/MarkerArray.h>
 

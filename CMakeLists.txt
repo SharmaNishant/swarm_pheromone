@@ -97,10 +97,11 @@ catkin_package(
 )
 
 ## Declare a cpp library
- add_library(swarm_pheromone
-   src/GlobalDeclaration.cpp
-   src/Patches.cpp
-)
+# add_library(swarm_pheromone
+#   src/GlobalDeclaration.cpp
+#   src/Patches.cpp
+#   src/Ants.cpp
+#)
 
 ## Declare a cpp executable
 # add_executable(swarm_pheromone_node src/swarm_pheromone_node.cpp)

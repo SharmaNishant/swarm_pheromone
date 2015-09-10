@@ -1,4 +1,4 @@
-#include "swaram_pheromone/Ants.h"
+#include "swarm_pheromone/Ants.h"
 
 Ants::Ants()
 {
@@ -68,24 +68,25 @@ void Ants::publishAnts()
     visualization_msgs::MarkerArray markerArray;
     markerArray.markers = markers;
     antPublisher.publish(markerArray);
-
 }
 
 void Ants::lookForFood(Environment &environment)
 {
+    Patch patch;
     for(int i = 0; i < antBots.size(); i++)
     {
-
-    if(antBots[i].state == LOOK_FOR_FOOD)
-    {
-        Color color;
-        color.r =
-        antBots[i].color = color;
-        Patches(x,y).foodValue = Patches(x,y).foodValue - 1;
-        Robots(i).direction = Robots(i).direction * -1;
-        Robots(i).state = toNest;
-        disp('food found');
-    }
+        if(antBots[i].state == LOOK_FOR_FOOD)
+        {
+//            Color color;
+//            color.r = 1.0f;
+//            color.g = 0.6f;
+//            color.a = 1.0f;
+//            antBots[i].color = color;
+//            patch.foodValue = Patches(x,y).foodValue - 1;
+//            Robots(i).direction = Robots(i).direction * -1;
+//            Robots(i).state = toNest;
+//            disp('food found');
+        }
     elseif Patches(x,y).foodTrailChemical > 1
         %uphillNestChemical(i);
     else
